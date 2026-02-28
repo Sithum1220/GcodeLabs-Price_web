@@ -121,7 +121,7 @@ export default function Contact() {
               </svg>
             </a>
 
-            <a href="mailto:contact@gcodelabs.dev" className="contact-card">
+            <a href="mailto:contact@gcodelabs.com" className="contact-card">
               <div className="contact-card-left">
                 <div className="contact-icon-ring contact-icon-ring--email">
                   <MailIcon />
@@ -129,7 +129,7 @@ export default function Contact() {
                 <div>
                   <div className="contact-card-label">General Inquiries</div>
                   <h3>Corporate Email</h3>
-                  <p>contact@gcodelabs.dev</p>
+                  <p>contact@gcodelabs.com</p>
                 </div>
               </div>
               <svg
