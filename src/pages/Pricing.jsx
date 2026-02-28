@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SEO } from "../utils/seo";
 
 const sharedFeatures = [
   "Fully Responsive Design (Mobile, Tablet & Desktop)",
@@ -47,6 +48,12 @@ const plans = [
 export default function Pricing() {
   return (
     <>
+      <SEO
+        path="/pricing"
+        title="Web Design Pricing Sri Lanka | GCode Labs — Packages from Rs. 20,000"
+        description="GCode Labs offers transparent web design packages in Sri Lanka starting from Rs. 20,000. Choose from Starter (1 page), Standard (5 pages), or Premium (10 pages) plans. Includes free domain, hosting, SSL, and lifetime maintenance."
+        keywords="web design price Sri Lanka, website cost Sri Lanka, affordable web design Sri Lanka, website packages Sri Lanka, WordPress price Sri Lanka, hotel website cost, villa website price, restaurant website cost, business website pricing Sri Lanka, GCode Labs pricing"
+      />
       {/* ── HEADER ── */}
       <section className="page-header">
         <div className="page-header-content">

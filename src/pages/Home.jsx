@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { SEO, LocalBusinessSchema, FAQSchema } from "../utils/seo";
 
 const features = [
   {
@@ -157,6 +158,15 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        path="/"
+        title="GCode Labs | Professional Web Development Sri Lanka — Hotel, Villa, Restaurant & Business Websites"
+        description="GCode Labs is a professional web development company in Sri Lanka. We build WordPress websites, hotel websites, villa websites, restaurant websites, e-commerce stores, and business websites. Affordable packages starting from Rs. 20,000."
+        keywords="web development Sri Lanka, WordPress website Sri Lanka, hotel website design Sri Lanka, villa website Sri Lanka, restaurant website Sri Lanka, business website Sri Lanka, landing page design, e-commerce website Sri Lanka, professional website design, web design Colombo, GCode Labs"
+      />
+      <LocalBusinessSchema />
+      <FAQSchema />
+
       {/* ── HERO SLIDER ── */}
       <section className="hero-slider">
         {slides.map((slide, idx) => (

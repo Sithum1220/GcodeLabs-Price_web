@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -33,14 +34,15 @@ function Layout() {
 }
 
 export default function App() {
-  // Forced Light Theme for Corporate Aesthetic
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", "light");
   }, []);
 
   return (
-    <BrowserRouter>
-      <Layout />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Layout />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }

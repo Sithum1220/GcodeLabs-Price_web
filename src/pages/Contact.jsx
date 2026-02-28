@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { SEO } from "../utils/seo";
 
 const MailIcon = () => (
   <svg
@@ -34,6 +35,12 @@ const WhatsAppIcon = () => (
 export default function Contact() {
   return (
     <>
+      <SEO
+        path="/contact"
+        title="Contact GCode Labs | Web Development Sri Lanka — WhatsApp & Email"
+        description="Get in touch with GCode Labs for professional web development in Sri Lanka. Contact us via WhatsApp or email to discuss your hotel, villa, restaurant, business, or e-commerce website project."
+        keywords="contact web developer Sri Lanka, hire web developer Sri Lanka, website design inquiry Sri Lanka, web development quote Sri Lanka, GCode Labs contact, WhatsApp web developer Sri Lanka"
+      />
       <section className="page-header">
         <div className="page-header-content">
           <h1 className="page-header-title">Contact Us</h1>
