@@ -13,6 +13,8 @@ const sharedFeatures = [
   "Free Lifetime 5 Business Email Addresses",
   "Google Analytics Setup",
   "Lifetime Free Maintenance*",
+  "Free Professional Business Card Design",
+  "Free Google Business Profile Setup",
 ];
 
 const plans = [
