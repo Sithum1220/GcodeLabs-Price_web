@@ -239,7 +239,44 @@ h1, h2, h3, h4, h5, h6 { color: var(--text-main); font-weight: 700; line-height:
 }
 
 .plan-price-block { margin-bottom: 4px; }
+.plan-price-original { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.price-cur-original { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); text-decoration: line-through; }
+.price-amt-original { font-size: 1.5rem; font-weight: 700; color: var(--text-muted); line-height: 1; text-decoration: line-through; }
+.price-was-label { font-size: 0.72rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-left: 2px; }
 .plan-price { display: flex; align-items: flex-end; gap: 4px; }
+
+/* Discount badge next to pages chip */
+.plan-header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.plan-header-top .plan-pages-chip { margin-bottom: 0; }
+.plan-discount-badge {
+  display: inline-flex; align-items: center;
+  background: #16a34a; color: #fff;
+  font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 100px;
+}
+
+/* "Limited Time Offer" banner */
+.plan-offer-banner {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 10px;
+  background: #fff7ed; color: #c2410c;
+  border: 1px solid #fed7aa;
+  border-radius: var(--radius); padding: 5px 12px;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* "You save Rs. X" chip below the price */
+.plan-savings-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 8px; margin-bottom: 2px;
+  background: #dcfce7; color: #15803d;
+  border: 1px solid #bbf7d0;
+  border-radius: var(--radius); padding: 5px 12px;
+  font-size: 0.82rem; font-weight: 700;
+  width: fit-content;
+}
 .price-cur {
   font-size: 1rem;
   font-weight: 600;

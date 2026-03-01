@@ -21,7 +21,10 @@ const plans = [
   {
     name: "Starter Plan",
     target: "Best for small businesses or promoting a single product.",
+    originalPrice: "25,000",
     price: "20,000",
+    savings: "5,000",
+    discount: "20% OFF",
     pages: "1 Page Website",
     delivery: "4 Days",
     renewal_price: "15,000",
@@ -30,7 +33,10 @@ const plans = [
   {
     name: "Standard Plan",
     target: "Ideal for most businesses wanting a solid online presence.",
+    originalPrice: "35,000",
     price: "28,000",
+    savings: "7,000",
+    discount: "20% OFF",
     pages: "Up to 5 Pages",
     delivery: "7 Days",
     renewal_price: "20,000",
@@ -39,7 +45,10 @@ const plans = [
   {
     name: "Premium Plan",
     target: "For serious businesses needing detailed pages and features.",
+    originalPrice: "50,000",
     price: "42,000",
+    savings: "8,000",
+    discount: "16% OFF",
     pages: "Up to 10 Pages",
     delivery: "14 Days",
     renewal_price: "28,000",
@@ -53,7 +62,7 @@ export default function Pricing() {
       <SEO
         path="/pricing"
         title="Web Design Pricing Sri Lanka | GCode Labs — Packages from Rs. 20,000"
-        description="GCode Labs offers transparent web design packages in Sri Lanka starting from Rs. 20,000. Choose from Starter (1 page), Standard (5 pages), or Premium (10 pages) plans. Includes free domain, hosting, SSL, and lifetime maintenance."
+        description="GCode Labs offers transparent web design packages in Sri Lanka. Starter plan from Rs. 20,000 (was Rs. 25,000), Standard from Rs. 28,000 (was Rs. 35,000), Premium from Rs. 42,000 (was Rs. 50,000). Includes free domain, hosting, SSL, and lifetime maintenance."
         keywords="web design price Sri Lanka, website cost Sri Lanka, affordable web design Sri Lanka, website packages Sri Lanka, WordPress price Sri Lanka, hotel website cost, villa website price, restaurant website cost, business website pricing Sri Lanka, GCode Labs pricing"
       />
       {/* ── HEADER ── */}
@@ -80,17 +89,41 @@ export default function Pricing() {
                 }`}
               >
                 <div className="plan-card-header">
-                  <div className="plan-pages-chip">{plan.pages}</div>
+                  <div className="plan-header-top">
+                    <div className="plan-pages-chip">{plan.pages}</div>
+                    {plan.discount && (
+                      <div className="plan-discount-badge">{plan.discount}</div>
+                    )}
+                  </div>
                   <h2 className="plan-name">{plan.name}</h2>
                   <p className="plan-target">{plan.target}</p>
+                  {plan.savings && (
+                    <div className="plan-offer-banner">
+                      🔥 Limited Time Offer
+                    </div>
+                  )}
                 </div>
 
                 <div className="plan-card-body">
                   <div className="plan-price-block">
+                    {plan.originalPrice && (
+                      <div className="plan-price-original">
+                        <span className="price-cur-original">Rs.</span>
+                        <span className="price-amt-original">
+                          {plan.originalPrice}
+                        </span>
+                        <span className="price-was-label">Regular Price</span>
+                      </div>
+                    )}
                     <div className="plan-price">
                       <span className="price-cur">Rs.</span>
                       <span className="price-amt">{plan.price}</span>
                     </div>
+                    {plan.savings && (
+                      <div className="plan-savings-chip">
+                        ✓ You Have save Rs. {plan.savings}!
+                      </div>
+                    )}
                     <p className="price-note">One-time development fee</p>
                   </div>
 
